@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServerManager++</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+  <link rel="stylesheet" href="/vendor/xterm/css/xterm.css">
+  <link rel="stylesheet" href="/css/os.css">
+</head>
+<body class="theme-dark">
+  <!-- boot -->
+  <div id="boot">
+    <div class="boot-logo">ServerManager<span>++</span></div>
+    <div class="boot-bar"><div></div></div>
+  </div>
+
+  <!-- lock screen -->
+  <div id="lock" class="hidden">
+    <div class="lock-clock" id="lockClock">00:00</div>
+    <div class="lock-date" id="lockDate"></div>
+    <form id="lockForm" class="lock-card">
+      <div class="lock-avatar">🖥️</div>
+      <div class="lock-name" id="lockName">Server</div>
+      <div class="lock-hint" id="lockHint">Enter your password</div>
+      <input type="password" id="lockPw" placeholder="Password" autocomplete="current-password" required>
+      <input type="password" id="lockPw2" placeholder="Repeat password" autocomplete="new-password" class="hidden">
+      <button type="submit" id="lockBtn">Unlock</button>
+      <div class="lock-error" id="lockError"></div>
+    </form>
+  </div>
+
+  <!-- desktop -->
+  <div id="desktop" class="hidden">
+    <div id="icons"></div>
+    <div id="windows"></div>
+  </div>
+
+  <!-- start menu -->
+  <div id="startmenu" class="hidden">
+    <div class="sm-head"><span id="smName">Server</span></div>
+    <input id="smSearch" placeholder="Search apps…" autocomplete="off">
+    <div id="smApps"></div>
+    <div class="sm-foot">
+      <button data-act="lock">🔒 Lock</button>
+      <button data-act="logout">⏻ Log out</button>
+    </div>
+  </div>
+
+  <!-- taskbar -->
+  <div id="taskbar" class="hidden">
+    <button id="startBtn" title="Start">⬢</button>
+    <div id="tasks"></div>
+    <div id="tray">
+      <span id="trayCpu" title="CPU">CPU –</span>
+      <span id="trayMem" title="Memory">RAM –</span>
+      <span id="trayClock"></span>
+    </div>
+  </div>
+
+  <div id="toasts"></div>
+  <div id="modal" class="hidden"></div>
+  <div id="ctxmenu" class="hidden"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/vendor/xterm/lib/xterm.js"></script>
+  <script src="/vendor/xterm-fit/lib/addon-fit.js"></script>
+  <script src="/js/core.js"></script>
+  <script src="/js/wm.js"></script>
+  <script src="/apps/monitor.js"></script>
+  <script src="/apps/files.js"></script>
+  <script src="/apps/editor.js"></script>
+  <script src="/apps/terminal.js"></script>
+  <script src="/apps/processes.js"></script>
+  <script src="/apps/services.js"></script>
+  <script src="/apps/settings.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

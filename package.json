@@ -1,0 +1,26 @@
+{
+  "name": "servermanagerpp",
+  "version": "1.0.0",
+  "description": "ServerManager++ — a web-based desktop OS for managing any home server",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "keywords": ["server", "dashboard", "web-os", "homelab", "self-hosted"],
+  "author": "Yavuz Selim (mybetasoft / 54Gamez)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "systeminformation": "^5.25.11"
+  },
+  "optionalDependencies": {
+    "node-pty": "^1.0.0"
+  }
+}
