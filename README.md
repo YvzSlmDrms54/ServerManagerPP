@@ -4,8 +4,8 @@
 
 > The successor of [MCServerManager++](https://github.com/YvzSlmDrms54/MCServerManagerPP). That one was for Minecraft servers; this one is for *any* server.
 
-![lock screen](docs/lock.png)
-![desktop](docs/desktop.png)
+![lock screen](docs/lockscreen.png)
+![desktop](docs/desktop-view.png)
 
 ## Features
 
